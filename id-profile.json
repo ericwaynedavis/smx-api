@@ -1,0 +1,5 @@
+{
+  "name": "OPT82_DOCSIS",
+  "circuit-id": "%SystemId %IfType %Port:%QTag",
+  "remote-id": "%BinaryMAC"
+}

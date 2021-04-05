@@ -1,0 +1,7 @@
+{
+  "name": "L2_DHCP_SNOOP",
+  "id-name": "OPT82_DOCSIS",
+  "lease-limit": "16",
+  "lock": "ENABLED",
+  "single-lease-overwrite": "DISABLED"
+}

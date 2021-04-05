@@ -1,0 +1,49 @@
+{
+    "name": "BASIC_SERVICE_EXAMPLE",
+	"deviceModel": "AXOS 21.x",
+    "type": "ip",
+    "ingress-flow": [
+      {
+        "flow-index": 1,
+        "description": "UPSTREAM PRIMARY SERVICE FLOW",
+        "rule": [
+          {
+            "index": 1,
+            "description": "MATCH ALL IPV4 DEST",
+            "match": {
+              "destination-ip-network": "0.0.0.0/0"
+            }
+          },
+          {
+            "index": 2,
+            "description": "MATCH ALL IPV6 DEST",
+            "match": {
+              "destination-ip-network": "::0/0"
+            }
+          }
+        ]
+      }
+    ],
+    "egress-flow": [
+      {
+        "flow-index": 1,
+        "description": "DOWNSTREAM PRIMARY SERVICE FLOW",
+        "rule": [
+          {
+            "index": 1,
+            "description": "MATCH ALL IPV4 SRC",
+            "match": {
+              "source-ip-network": "0.0.0.0/0"
+            }
+          },
+          {
+            "index": 2,
+            "description": "MATCH ALL IPV6 SRC",
+            "match": {
+              "source-ip-network": "::0/0"
+            }
+          }
+        ]
+      }
+    ]
+  }

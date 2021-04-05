@@ -1,0 +1,25 @@
+{
+	"user": "admin",
+	"pass": "test123",
+	"url": "https://172.16.2.5:18443/rest/v1",
+	"use_ssl": "False",
+	"olt": { 
+		"device-name": "Debonair",
+		"ip-address": "10.1.2.2",
+		"username": "sysadmin",
+		"password": "sysadmin" },
+	"configs": [ 
+		{ "method": "POST", "path": "/ems/profile/class-map", "config-file": "class-map.json" },
+		{ "method": "POST", "path": "/config/profile/sync/class-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },
+		{ "method": "POST", "path": "/ems/profile/policy-map", "config-file": "policy-map.json" },
+		{ "method": "POST", "path": "/config/profile/sync/policy-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },		
+		{ "method": "POST", "path": "/config/service-template", "config-file": "service-template.json" },
+		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" }	,
+		{ "method": "POST", "path": "/config/device/Debonair/ont", "config-file": "ont.json" },
+		{ "method": "POST", "path": "/ems/profile/id-profile", "config-file": "id-profile.json" },
+		{ "method": "POST", "path": "/config/profile/sync/id-profile/OPT82_DOCSIS", "config-file": "sync-profile-filter.json" },
+		{ "method": "POST", "path": "/ems/profile/dhcp-profile", "config-file": "l2-dhcp-profile.json" },
+		{ "method": "POST", "path": "/config/profile/sync/dhcp-profile/L2_DHCP_SNOOP", "config-file": "sync-profile-filter.json" },
+		{ "method": "POST", "path": "/config/device/Debonair/vlan", "config-file": "vlan.json" },	
+		{ "method": "POST", "path": "/ems/gui/service", "config-file": "service.json" }		]
+}

@@ -7,5 +7,6 @@
   "l2-dhcp-profile": "L2_DHCP_SNOOP",
   "source-verify": "ENABLED",
   "ipv6-source-verify": "ENABLED",
-  "mff": "ENABLED"
+  "mff": "ENABLED",
+  "global-vlan-description": "Global Data VLAN"
 }

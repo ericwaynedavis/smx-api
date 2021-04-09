@@ -1,14 +1,14 @@
 {
     "template-name": "INTERNET_DHCP",
     "admin-state": "enabled",
-    "allow-port-template-override": "true",
+    "port-template": "ONT-PORT-TEMPLATE",
     "service": {
       "service-type": "Data service",
       "user-type": "residential",
       "policy-map": "BASIC_SERVICE_EXAMPLE",
-      "vlan": 482,
-      "allow-vlan-override": "false",
-      "transport-service-profile": "SYSTEM_TSP",
-      "option82Action": "insert"
-    }
+      "allow-vlan-override": true,
+      "option82Action": "insert",
+	  "global-vlan-desc": "Global Data VLAN"
+    },
+	"uni-service-info": {}
   }

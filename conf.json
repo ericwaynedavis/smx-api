@@ -15,11 +15,11 @@
 		{ "method": "POST", "path": "/config/profile/sync/policy-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },		
 		{ "method": "POST", "path": "/config/service-template", "config-file": "service-template.json" },
 		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" }	,
-		{ "method": "POST", "path": "/config/device/Debonair/ont", "config-file": "ont.json" },
+		{ "method": "POST", "path": "/config/device/virtualOLT/ont", "config-file": "ont.json" },
 		{ "method": "POST", "path": "/ems/profile/id-profile", "config-file": "id-profile.json" },
 		{ "method": "POST", "path": "/config/profile/sync/id-profile/OPT82_DOCSIS", "config-file": "sync-profile-filter.json" },
 		{ "method": "POST", "path": "/ems/profile/dhcp-profile", "config-file": "l2-dhcp-profile.json" },
 		{ "method": "POST", "path": "/config/profile/sync/dhcp-profile/L2_DHCP_SNOOP", "config-file": "sync-profile-filter.json" },
 		{ "method": "POST", "path": "/config/device/Debonair/vlan", "config-file": "vlan.json" },	
-		{ "method": "POST", "path": "/ems/gui/service", "config-file": "service.json" }		]
+		{ "method": "POST", "path": "/ems/service", "config-file": "service.json" }		]
 }

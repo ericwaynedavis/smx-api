@@ -1,36 +1,38 @@
- {
-    "deviceModel": "AXOS 21.x",
-    "name": "BASIC_SERVICE_EXAMPLE",
-    "type": "ip",
-    "class-map-ip": {
-      "name": "BASIC_SERVICE_EXAMPLE",
-      "traffic-class": [
-        {
-          "index": 1,
-          "egress-shaper": {
-            "maximum": 1000000,
-            "minimum": 0
-          }
-        }
-      ],
-      "egress-flow": [
-        {
-          "flow-id": 1,
-          "service-class": "PRIMARY_DOWNSTREAM",
-          "set-dscp-value": "BE-CS0",
-          "traffic-class": 1
-        }
-      ],
-      "ingress-flow": [
-        {
-          "flow-id": 1,
-          "service-class": "PRIMARY_UPSTREAM",
-          "set-dscp-value": "BE-CS0",
-          "ingress-meter": {
-            "cir": 0,
-            "eir": 500000
-          }
-        }
-      ]
-    }
-  }
+[
+	{
+		"deviceModel": "AXOS 21.x",
+		"name": "BASIC_SERVICE_EXAMPLE",
+		"type": "ip",
+		"class-map-ip": {
+		  "name": "BASIC_SERVICE_EXAMPLE",
+		  "traffic-class": [
+			{
+			  "index": 1,
+			  "egress-shaper": {
+				"maximum": 1000000,
+				"minimum": 0
+			  }
+			}
+		  ],
+		  "egress-flow": [
+			{
+			  "flow-id": 1,
+			  "service-class": "PRIMARY_DOWNSTREAM",
+			  "set-dscp-value": "BE-CS0",
+			  "traffic-class": 1
+			}
+		  ],
+		  "ingress-flow": [
+			{
+			  "flow-id": 1,
+			  "service-class": "PRIMARY_UPSTREAM",
+			  "set-dscp-value": "BE-CS0",
+			  "ingress-meter": {
+				"cir": 0,
+				"eir": 500000
+			  }
+			}
+		  ]
+		}
+	}
+ ] 

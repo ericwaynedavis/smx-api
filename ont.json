@@ -1,10 +1,22 @@
-{
-  "description": "applesauce",
-  "ont-id": "JANE_DOE",
-  "device-name": "virtualOLT",
-  "ont-type": "Residential",
-  "isGlobalOnt": true,
-  "ont-profile-id": "GP1100X",
-   "serial-number": "CXNK0009ED12",
-   "subscriber-id":  "8675309"
-}
+[	
+	{
+	  "description": "applesauce",
+	  "ont-id": "JANE_DOE",
+	  "device-name": "virtualOLT",
+	  "ont-type": "Residential",
+	  "isGlobalOnt": true,
+	  "ont-profile-id": "GP1100X",
+	   "serial-number": "CXNK0009ED12",
+	   "subscriber-id":  "8675309"
+	},
+	{
+	  "description": "applesauce",
+	  "ont-id": "JIM_DOE",
+	  "device-name": "virtualOLT",
+	  "ont-type": "Residential",
+	  "isGlobalOnt": true,
+	  "ont-profile-id": "GP1100X",
+	   "serial-number": "CXNK0009ED13",
+	   "subscriber-id":  "8675310"
+	}
+]

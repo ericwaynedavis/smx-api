@@ -1,26 +1,28 @@
-{
-  "name": "Jane Doe",
-  "customId": "8675309",
-  "orgId": "Calix",
-  "locations": [
-    {
-      "primary": true,
-      "address": [
-        {
-          "streetLine1": "123 Applejack Street",
-          "city": "Gotham",
-          "state": "Alabama",
-          "zip": "45235",
-          "country": "United States"
-        }
-      ],
-      "contacts": [
-        {
-          "phone": "5558675309",
-          "email": "jane.doe@bitbucket.org",
-          "primary": true
-        }
-      ]
-    }
-  ]
-}
+[
+	{
+	  "name": "Jane Doe",
+	  "customId": "8675309",
+	  "orgId": "Calix",
+	  "locations": [
+		{
+		  "primary": true,
+		  "address": [
+			{
+			  "streetLine1": "123 Applejack Street",
+			  "city": "Gotham",
+			  "state": "Alabama",
+			  "zip": "45235",
+			  "country": "United States"
+			}
+		  ],
+		  "contacts": [
+			{
+			  "phone": "5558675309",
+			  "email": "jane.doe@bitbucket.org",
+			  "primary": true
+			}
+		  ]
+		}
+	  ]
+	}
+]

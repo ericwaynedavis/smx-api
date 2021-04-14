@@ -1,12 +1,14 @@
-{
-  "device-name": "Debonair",
-  "vlan-id": 482,
-  "description": "INTERNET_DHCP",
-  "mode": "N2ONE",
-  "mac-learning": "ENABLED",
-  "l2-dhcp-profile": "L2_DHCP_SNOOP",
-  "source-verify": "ENABLED",
-  "ipv6-source-verify": "ENABLED",
-  "mff": "ENABLED",
-  "global-vlan-description": "Global Data VLAN"
-}
+[
+	{
+	  "device-name": "Debonair",
+	  "vlan-id": 482,
+	  "description": "INTERNET_DHCP",
+	  "mode": "N2ONE",
+	  "mac-learning": "ENABLED",
+	  "l2-dhcp-profile": "L2_DHCP_SNOOP",
+	  "source-verify": "ENABLED",
+	  "ipv6-source-verify": "ENABLED",
+	  "mff": "ENABLED",
+	  "global-vlan-description": "Global Data VLAN"
+	}
+]

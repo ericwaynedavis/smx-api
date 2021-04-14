@@ -8,18 +8,22 @@
 		"ip-address": "10.1.2.2",
 		"username": "sysadmin",
 		"password": "sysadmin" },
-	"configs": [ 
+	"create-profiles": [ 
 		{ "method": "POST", "path": "/ems/profile/class-map", "config-file": "class-map.json" },
 		{ "method": "POST", "path": "/config/profile/sync/class-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },
 		{ "method": "POST", "path": "/ems/profile/policy-map", "config-file": "policy-map.json" },
 		{ "method": "POST", "path": "/config/profile/sync/policy-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },		
 		{ "method": "POST", "path": "/config/service-template", "config-file": "service-template.json" },
-		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" }	,
-		{ "method": "POST", "path": "/config/device/virtualOLT/ont", "config-file": "ont.json" },
 		{ "method": "POST", "path": "/ems/profile/id-profile", "config-file": "id-profile.json" },
 		{ "method": "POST", "path": "/config/profile/sync/id-profile/OPT82_DOCSIS", "config-file": "sync-profile-filter.json" },
 		{ "method": "POST", "path": "/ems/profile/dhcp-profile", "config-file": "l2-dhcp-profile.json" },
 		{ "method": "POST", "path": "/config/profile/sync/dhcp-profile/L2_DHCP_SNOOP", "config-file": "sync-profile-filter.json" },
-		{ "method": "POST", "path": "/config/device/Debonair/vlan", "config-file": "vlan.json" },	
-		{ "method": "POST", "path": "/ems/service", "config-file": "service.json" }		]
+		{ "method": "POST", "path": "/config/device/Debonair/vlan", "config-file": "vlan.json" } ],
+	"create-subs-onts": [
+		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" },
+		{ "method": "POST", "path": "/config/device/virtualOLT/ont", "config-file": "ont.json" } ],
+	"create-services": [
+		{ "method": "POST", "path": "/ems/service", "config-file": "service.json" }	],
+	"delete-services": [
+		{"method": "POST", "path": "/ems/service?device-name=virtualOLT&ont-id=JANE_DOE&ont-port-id=x1&service-name=INTERNET_DHCP"} ]
 }

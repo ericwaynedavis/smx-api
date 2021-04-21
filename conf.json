@@ -10,20 +10,37 @@
 		"password": "sysadmin" },
 	"create-profiles": [ 
 		{ "method": "POST", "path": "/ems/profile/class-map", "config-file": "class-map.json" },
-		{ "method": "POST", "path": "/config/profile/sync/class-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },
 		{ "method": "POST", "path": "/ems/profile/policy-map", "config-file": "policy-map.json" },
-		{ "method": "POST", "path": "/config/profile/sync/policy-map/BASIC_SERVICE_EXAMPLE", "config-file": "sync-profile-filter.json" },		
-		{ "method": "POST", "path": "/config/service-template", "config-file": "service-template.json" },
 		{ "method": "POST", "path": "/ems/profile/id-profile", "config-file": "id-profile.json" },
-		{ "method": "POST", "path": "/config/profile/sync/id-profile/OPT82_DOCSIS", "config-file": "sync-profile-filter.json" },
-		{ "method": "POST", "path": "/ems/profile/dhcp-profile", "config-file": "l2-dhcp-profile.json" },
-		{ "method": "POST", "path": "/config/profile/sync/dhcp-profile/L2_DHCP_SNOOP", "config-file": "sync-profile-filter.json" },
-		{ "method": "POST", "path": "/config/device/Debonair/vlan", "config-file": "vlan.json" } ],
-	"create-subs-onts": [
-		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" },
-		{ "method": "POST", "path": "/config/device/virtualOLT/ont", "config-file": "ont.json" } ],
+		{ "method": "POST", "path": "/ems/profile/dhcp-profile", "config-file": "l2-dhcp-profile.json" } ],
+	"synchronize-profiles" : [
+		{ "method": "POST", "path": "/config/profile/sync/class-map/{name}", "config-file": "class-map.json" },
+		{ "method": "POST", "path": "/config/profile/sync/policy-map/{name}", "config-file": "policy-map.json" },		
+		{ "method": "POST", "path": "/config/profile/sync/id-profile/{name}", "config-file": "id-profile.json" },
+		{ "method": "POST", "path": "/config/profile/sync/dhcp-profile/{name}", "config-file": "l2-dhcp-profile.json" } ],
+	"create-templates": [ 
+		{ "method": "POST", "path": "/config/service-template", "config-file": "service-template.json" } ],
+	"create-vlans": [
+	    { "method": "POST", "path": "/config/device/{deviceName}/vlan", "config-file": "vlan.json" } ],
+	"create-subscribers": [
+		{ "method": "POST", "path": "/ems/subscriber", "config-file": "subscriber.json" } ],
+	"create-onts": [
+		{ "method": "POST", "path": "/config/device/{deviceName}/ont", "config-file": "ont.json" } ],
 	"create-services": [
 		{ "method": "POST", "path": "/ems/service", "config-file": "service.json" }	],
 	"delete-services": [
-		{"method": "POST", "path": "/ems/service?device-name=virtualOLT&ont-id=JANE_DOE&ont-port-id=x1&service-name=INTERNET_DHCP"} ]
+		{"method": "DELETE", "path": "/ems/service?device-name={deviceName}&ont-id={ontId}&ont-port-id={portId}&service-name={serviceName}", "config-file": "service.json"} ],
+	"delete-onts": [
+		{"method": "DELETE", "path": "/config/device/{deviceName}/ont?ont-id={ontId}&force-delete=true",  "config-file": "ont.json"} ],
+	"delete-subscribers": [ 
+		{ "method": "DELETE", "path": "/ems/subscriber/org/{orgId}/account/{customId}?force-delete=true", "config-file": "subscriber.json" } ],
+	"delete-vlans": [
+		{"method": "DELETE", "path": "/config/device/Debonair/vlan/{vlanId}",  "config-file": "vlan.json"} ],
+	"delete-templates": [ 
+		{"method": "DELETE", "path": "/config/service-template/{name}",  "config-file": "service-template.json"} ],
+	"delete-profiles": [
+		{"method": "DELETE", "path": "/ems/profile/dhcp-profile/{name}", "config-file": "l2-dhcp-profile.json" },
+		{"method": "DELETE", "path": "/ems/profile/id-profile/{name}", "config-file": "id-profile.json" },
+		{"method": "DELETE", "path": "/ems/profile/policy-map/{name}",  "config-file": "policy-map.json"},
+		{"method": "DELETE", "path": "/ems/profile/class-map/{name}", "config-file": "class-map.json"} ]
 }

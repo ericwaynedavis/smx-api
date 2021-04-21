@@ -3,7 +3,7 @@
 	  "name": "Demo_21_1_SMx",
 	  "description": "SMx 21.1 Demo",
 	  "serviceType": "DATA_SERVICE",
-	  "ont-id": "JANE_DOE",
+	  "ont-id": "alpha",
 	  "ont-port-id": "x1",
 	  "subscriber-id": "8675309",
 	  "device-name": "virtualOLT",

@@ -24,5 +24,57 @@
 		  ]
 		}
 	  ]
+	},
+	{
+	  "name": "Jim Rice",
+	  "customId": "8675310",
+	  "orgId": "Calix",
+	  "locations": [
+		{
+		  "primary": true,
+		  "address": [
+			{
+			  "streetLine1": "2108 Round Circle",
+			  "city": "Metropolis",
+			  "state": "Kansas",
+			  "zip": "35623",
+			  "country": "United States"
+			}
+		  ],
+		  "contacts": [
+			{
+			  "phone": "5558675310",
+			  "email": "jane.rice@bitbucket.org",
+			  "primary": true
+			}
+		  ]
+		}
+	  ]
+	},
+	{
+	  "name": "Casey Jones",
+	  "customId": "8675311",
+	  "orgId": "Calix",
+	  "locations": [
+		{
+		  "primary": true,
+		  "address": [
+			{
+			  "streetLine1": "908 Drive Way",
+			  "city": "Smalltown",
+			  "state": "California",
+			  "zip": "90856",
+			  "country": "United States"
+			}
+		  ],
+		  "contacts": [
+			{
+			  "phone": "5558675311",
+			  "email": "casey.jones@bitbucket.org",
+			  "primary": true
+			}
+		  ]
+		}
+	  ]
 	}
 ]

@@ -47,5 +47,151 @@
 			]
 		  }
 		]
+	 },
+	{
+		"name": "MULTIPLE_IP_FLOW_SERVICE_EXAMPLE",
+		"deviceModel": "AXOS 21.x",
+		"type": "ip",
+		"ingress-flow": [
+		  {
+			"flow-index": 1,
+			"description": "UPSTREAM PRIMARY SERVICE FLOW",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "MATCH ALL IPV4 DEST",
+				"priority": 0,
+				"match": {
+				  "destination-ip-network": "0.0.0.0/0"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "MATCH ALL IPV6 DEST",
+				"priority": 0,
+				"match": {
+				  "destination-ip-network": "::0/0"
+				}
+			  }
+			]
+		  },
+		  {
+			"flow-index": 2,
+			"description": "UPSTREAM SERVICE FLOW 2",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "MATCH IPV4 DEST 10.10.10.0/24",
+				"match": {
+				  "destination-ip-network": "10.10.10.0/24"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "MATCH IPV6 DEST fd00:8834:1971:ff00:0010:0010:0010:0000/120",
+				"match": {
+				  "destination-ip-network": "fd00:8834:1971:ff00:0010:0010:0010:0000/120"
+				}
+			  }
+			]
+		  },
+		  {
+			"flow-index": 8,
+			"description": "UPSTREAM DROP FILTER EXAMPLE",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "FILTER UDP DST PORTS 4001-4024",
+				"match": {
+				  "protocol": 17,
+				  "destination-port-range": "4001-4024"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "FILTER ICMP RA",
+				"match": {
+				  "icmp-type": 9
+				}
+			  }
+			]
+		  }
+		],
+		"egress-flow": [
+		  {
+			"flow-index": 1,
+			"description": "DOWNSTREAM PRIMARY SERVICE FLOW",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "MATCH ALL IPV4 SRC",
+				"match": {
+				  "source-ip-network": "0.0.0.0/0"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "MATCH ALL IPV6 SRC",
+				"match": {
+				  "source-ip-network": "::0/0"
+				}
+			  }
+			]
+		  },
+		  {
+			"flow-index": 2,
+			"description": "DOWNSTREAM  SERVICE FLOW 2",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "MATCH IPV4 SRC 10.10.10.0/24",
+				"match": {
+				  "source-ip-network": "10.10.10.0/24"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "MATCH IPV6 SRC fd00:8834:1971:ff00:0010:0010:0010:0000/120",
+				"match": {
+				  "source-ip-network": "fd00:8834:1971:ff00:0010:0010:0010:0000/120"
+				}
+			  }
+			]
+		  },
+		  {
+			"flow-index": 8,
+			"description": "DOWNSTREAM DROP FILTER EXAMPLE",
+			"rule": [
+			  {
+				"index": 1,
+				"description": "FILTER TELNET and SSH SERVER PORTS",
+				"match": {
+				  "destination-port-range": "22-23"
+				}
+			  },
+			  {
+				"index": 2,
+				"description": "FILTER SMTP SERVER PORT",
+				"match": {
+				  "destination-port-range": "25"
+				}
+			  },
+			  {
+				"index": 3,
+				"description": "FILTER DNS SERVER PORT",
+				"match": {
+				  "destination-port-range": "53"
+				}
+			  },
+			  {
+				"index": 4,
+				"description": "FILTER HTTP SERVER PORT",
+				"match": {
+				  "destination-port-range": "80"
+				}
+			  }
+			]
+		  }
+		]
 	 }
  ]

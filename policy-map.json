@@ -34,5 +34,73 @@
 			}
 		  ]
 		}
+	},
+	{
+		"deviceModel": "AXOS 21.x",
+		"name": "MULTIPLE_IP_FLOW_SERVICE_EXAMPLE",
+		"type": "ip",
+		"class-map-ip": {
+		  "name": "MULTIPLE_IP_FLOW_SERVICE_EXAMPLE",
+		  "traffic-class": [
+			{
+			  "index": 1,
+			  "egress-shaper": {
+				"maximum": 1000000,
+				"minimum": 0
+			  }
+			},
+			{
+			  "index": 2,
+			  "egress-shaper": {
+				"maximum": 20000,
+				"minimum": 20000
+			  }
+			}
+		  ],
+		  "egress-flow": [
+			{
+			  "flow-id": 1,
+			  "service-class": "PRIMARY_DOWNSTREAM",
+			  "set-dscp-value": "BE-CS0",
+			  "traffic-class": 1
+			},
+			{
+			  "flow-id": 2,
+			  "service-class": "SVC_FLOW2_DOWNSTREAM",
+			  "set-dscp-value": "AF11",
+			  "traffic-class": 1
+			},
+			{
+			  "flow-id": 8,
+			  "service-class": "DROP_FILTER_DOWNSTREAM",
+			  "deny": true
+			}
+		  ],
+		  "ingress-flow": [
+			{
+			  "flow-id": 1,
+			  "service-class": "PRIMARY_UPSTREAM",
+			  "set-dscp-value": "BE-CS0",
+			  "ingress-meter": {
+				"cir": 0,
+				"eir": 500000
+			  }
+			},
+			{
+			  "flow-id": 2,
+			  "service-class": "SVC_FLOW2_UPSTREAM",
+			  "set-dscp-value": "AF11",
+			  "ingress-meter": {
+				"cir": 512,
+				"eir": 512
+			  }
+			},
+			{
+			  "flow-id": 8,
+			  "service-class": "DROP_FILTER_UPSTREAM",
+			  "deny": true
+			}
+		  ]
+		}
 	}
  ] 

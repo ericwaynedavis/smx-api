@@ -1,6 +1,6 @@
 [	
 	{
-	  "description": "applesauce",
+	  "description": "alpha",
 	  "ont-id": "alpha",
 	  "device-name": "virtualOLT",
 	  "ont-type": "Residential",
@@ -10,7 +10,7 @@
 	   "subscriber-id":  "8675309"
 	},
 	{
-	  "description": "applesauce",
+	  "description": "bravo",
 	  "ont-id": "bravo",
 	  "device-name": "virtualOLT",
 	  "ont-type": "Residential",
@@ -20,7 +20,7 @@
 	   "subscriber-id":  "8675310"
 	},
 	{
-	  "description": "applesauce",
+	  "description": "charlie",
 	  "ont-id": "charlie",
 	  "device-name": "virtualOLT",
 	  "ont-type": "Residential",

@@ -1,12 +1,26 @@
 [
 	{
-		"template-name": "INTERNET_DHCP",
+		"template-name": "BASIC_INTERNET_DHCP",
 		"admin-state": "enabled",
 		"port-template": "ONT-PORT-TEMPLATE",
 		"service": {
 		  "service-type": "Data service",
 		  "user-type": "residential",
 		  "policy-map": "BASIC_SERVICE_EXAMPLE",
+		  "allow-vlan-override": true,
+		  "option82Action": "insert",
+		  "global-vlan-desc": "Global Data VLAN"
+		},
+		"uni-service-info": {}
+	 },
+	 {
+		"template-name": "MULTI_SERVICE_FLOW_DHCP",
+		"admin-state": "enabled",
+		"port-template": "ONT-PORT-TEMPLATE",
+		"service": {
+		  "service-type": "Data service",
+		  "user-type": "residential",
+		  "policy-map": "MULTIPLE_IP_FLOW_SERVICE_EXAMPLE",
 		  "allow-vlan-override": true,
 		  "option82Action": "insert",
 		  "global-vlan-desc": "Global Data VLAN"

@@ -1,14 +1,38 @@
 [
 	{
-	  "name": "Demo_21_1_SMx",
-	  "description": "SMx 21.1 Demo",
+	  "name": "Demo_SMx",
+	  "description": "SMx Version 21.x",
 	  "serviceType": "DATA_SERVICE",
 	  "ont-id": "alpha",
 	  "ont-port-id": "x1",
 	  "subscriber-id": "8675309",
 	  "device-name": "virtualOLT",
 	  "admin-state": "enabled",
-	  "service-name": "INTERNET_DHCP",
+	  "service-name": "BASIC_INTERNET_DHCP",
+	  "vlan": "482"
+	},
+	{
+	  "name": "Demo_SMx",
+	  "description": "SMx Version 21.x",
+	  "serviceType": "DATA_SERVICE",
+	  "ont-id": "bravo",
+	  "ont-port-id": "x1",
+	  "subscriber-id": "8675310",
+	  "device-name": "virtualOLT",
+	  "admin-state": "enabled",
+	  "service-name": "MULTI_SERVICE_FLOW_DHCP",
+	  "vlan": "482"
+	},
+	{
+	  "name": "Demo_SMx",
+	  "description": "SMx Version 21.x",
+	  "serviceType": "DATA_SERVICE",
+	  "ont-id": "charlie",
+	  "ont-port-id": "G1",
+	  "subscriber-id": "8675311",
+	  "device-name": "virtualOLT",
+	  "admin-state": "enabled",
+	  "service-name": "MULTI_SERVICE_FLOW_DHCP",
 	  "vlan": "482"
 	}
 ]

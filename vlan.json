@@ -2,7 +2,7 @@
 	{
 	  "device-name": "Debonair",
 	  "vlan-id": 482,
-	  "description": "INTERNET_DHCP",
+	  "description": "INTERNET",
 	  "mode": "N2ONE",
 	  "mac-learning": "ENABLED",
 	  "l2-dhcp-profile": "L2_DHCP_SNOOP",
